@@ -6,6 +6,7 @@ import Header from '../Header'
 import './index.css'
 
 const Home = () => {
+  const accessToken = Cookies.get('jwt_token')
   if (accessToken === undefined) {
     return <Redirect to="/login" />
   }
@@ -18,6 +19,7 @@ const Home = () => {
           <h1 className="home-heading">Clothes That Get YOU Noticed</h1>
           <img
             src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-img.png"
+            alt="home"
             className="home-mobile-img"
           />
           <p className="home-description">
